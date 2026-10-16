@@ -18,10 +18,29 @@ public class sandwich {
         System.out.print("Please choose a sandwich size: ");
         int size = Integer.parseInt(myScanner.nextLine());
 
-        if (size == 1) {
-            price = 5.45;
-        } else {
+        if (size == 2) {
             price = 8.95;
+        } else {
+            price = 5.45;
+        }
+
+        System.out.print("Would you like your sandwich loaded (Y)es or (N)o: ");
+        char answer = myScanner.nextLine().charAt(0);
+
+        if (answer == 'Y' || answer == 'y') {
+            String loaded = """
+                    a. Regular: $1.00
+                    b. Large: $1.75""";
+
+            System.out.println(loaded);
+            System.out.print("Which do you prefer: ");
+            char choice = myScanner.nextLine().charAt(0);
+
+            if (choice == 'B' || choice == 'b') {
+                price = price + 1.75;
+            } else {
+                price = price + 1.00;
+            }
         }
 
 
@@ -48,7 +67,6 @@ public class sandwich {
         } else {
             System.out.println("Total: " + price);
         }
-
 
     }
 
