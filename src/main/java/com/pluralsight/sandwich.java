@@ -14,7 +14,7 @@ public class sandwich {
                 2: Large: base price $8.95
                 """;
 
-        System.out.println(sandwichSize);
+        System.out.print(sandwichSize);
         System.out.print("Please choose a sandwich size: ");
         int size = Integer.parseInt(myScanner.nextLine());
 
@@ -23,6 +23,9 @@ public class sandwich {
         } else {
             price = 5.45;
         }
+
+        System.out.println("current total: " + price);
+
 
         System.out.print("Would you like your sandwich loaded (Y)es or (N)o: ");
         char answer = myScanner.nextLine().charAt(0);
@@ -43,6 +46,7 @@ public class sandwich {
             }
         }
 
+        System.out.println("current total: " + price);
 
         String userAge = """
                 a. Student (17 years old or younger) – receive a 10% discount
@@ -65,7 +69,7 @@ public class sandwich {
 
             System.out.printf("Total: %.2f", total);
         } else {
-            System.out.println("Total: " + price);
+            System.out.printf("Total: %.2f", price);
         }
 
     }
